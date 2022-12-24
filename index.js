@@ -25,15 +25,19 @@ function fillday(index, meal) {
 }
 
 function generate() {
-    // for (let i = 0; i < mealwrapper.children.length; i++) {
         if (dayindex == 6) {
             used = []
             ingredientarray = []
             ingredientlist.innerText = ''
             dayindex  = -1
-            mealwrapper.children[2] = ''
+            mealwrapper.children[0].innerHTML = ''
+            mealwrapper.children[1].innerHTML = ''
+            mealwrapper.children[2].innerHTML = ''
+            mealwrapper.children[3].innerHTML = ''
+            mealwrapper.children[4].innerHTML = ''
+            mealwrapper.children[5].innerHTML = ''
+            mealwrapper.children[6].innerHTML = ''
             return generate()
-            // console.log(mealwrapper.length)
         }
         let mealindex = meals[Math.floor(Math.random() * meals.length)]
         let meal = mealindex[0]
